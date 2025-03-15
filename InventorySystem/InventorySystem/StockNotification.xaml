@@ -1,0 +1,177 @@
+﻿<Page x:Class="InventorySystem.StockNotification"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InventorySystem"
+      mc:Ignorable="d" 
+      Title="StockNotification" Height="720" Width="980" >
+    <Grid Background="#FFA09D9D">
+
+
+        <Grid Background="#FFA09D9D" >
+            <Label Content="Stock Notification System" HorizontalAlignment="Center" Margin="0,21,0,0" VerticalAlignment="Top" Height="64" Width="446" FontSize="36" Foreground="White" FontWeight="Bold"/>
+
+            <DataGrid x:Name="StockNotificationDataGrid" AutoGenerateColumns="False" CanUserAddRows="False"
+                      Margin="70,210,70,74" Background="White" HeadersVisibility="Column" SelectionChanged="StockNotificationDataGrid_SelectionChanged">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Equipment ID" Binding="{Binding EquipmentID}" Width="100"/>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="400"/>
+                    <DataGridTextColumn Header="Stock" Binding="{Binding Stock}" Width="100"/>
+                    <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="240"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Content="ALL EQUIPMENT" 
+                Margin="77,131,749,540"
+                FontWeight="Bold"
+                FontSize="16"
+                Foreground="Black"
+                Background="White"
+                Padding="10"
+                BorderThickness="0"
+                Cursor="Hand" Click="Button_Reset_Click">
+                <Button.Effect>
+                    <DropShadowEffect Color="Gray" BlurRadius="10" ShadowDepth="3"/>
+                </Button.Effect>
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}" 
+                                        CornerRadius="30" 
+                                        Padding="{TemplateBinding Padding}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <!-- Borrowed Button -->
+            <Button Content="BORROWED" 
+                Margin="247,131,580,540"
+                FontWeight="Bold"
+                FontSize="16"
+                Foreground="Lime"
+                Background="White"
+                Padding="10"
+                BorderThickness="0"
+                Cursor="Hand" Click="Button_Borrowed_Click">
+                <Button.Effect>
+                    <DropShadowEffect Color="Gray" BlurRadius="10" ShadowDepth="3"/>
+                </Button.Effect>
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}" 
+                                        CornerRadius="30" 
+                                        Padding="{TemplateBinding Padding}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <!-- Low Stock Button -->
+            <Button Content="LOW STOCK"  
+                Margin="415,131,412,540"
+                FontWeight="Bold"
+                FontSize="16"
+                Foreground="Yellow"
+                Background="White"
+                Padding="10"
+                BorderThickness="0"
+                Cursor="Hand" Click="Button_LowStock_Click">
+                <Button.Effect>
+                    <DropShadowEffect Color="Gray" BlurRadius="10" ShadowDepth="3"/>
+                </Button.Effect>
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}" 
+                                        CornerRadius="30" 
+                                        Padding="{TemplateBinding Padding}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <!-- No Stock Button -->
+            <Button Content="NO STOCK" 
+                Margin="586,131,241,540"
+                FontWeight="Bold"
+                FontSize="16"
+                Foreground="Red"
+                Background="White"
+                Padding="10"
+                BorderThickness="0"
+                Cursor="Hand" Click="Button_NoStock_Click">
+                <Button.Effect>
+                    <DropShadowEffect Color="Gray" BlurRadius="10" ShadowDepth="3"/>
+                </Button.Effect>
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}" 
+                                        CornerRadius="30" 
+                                        Padding="{TemplateBinding Padding}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <!-- Damaged Button -->
+            <Button Content="REPORTED" 
+                Margin="757,131,70,540"
+                FontWeight="Bold"
+                FontSize="16"
+                Foreground="Gray"
+                Background="White"
+                Padding="10"
+                BorderThickness="0"
+                Cursor="Hand" Click="Button_Damaged_Click">
+                <Button.Effect>
+                    <DropShadowEffect Color="Gray" BlurRadius="10" ShadowDepth="3"/>
+                </Button.Effect>
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Background="{TemplateBinding Background}" 
+                                        CornerRadius="30" 
+                                        Padding="{TemplateBinding Padding}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,42 @@
+﻿<Page x:Class="InventorySystem.Borrow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InventorySystem"
+      mc:Ignorable="d" 
+      Title="Borrow" Height="720" Width="980" Loaded="Page_Loaded">
+    <Grid Background="#FFA09D9D">
+
+        <Grid Background="#FFA09D9D">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="searchEquipmentTextBox" HorizontalAlignment="Left" Margin="561,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="372" Height="26" FontSize="16" TextChanged="searchEquipmentTextBox_TextChanged" Text="Search Item" GotFocus="searchEquipmentTextBox_GotFocus" LostFocus="searchEquipmentTextBox_LostFocus"/>
+            <DataGrid x:Name="tblEquipment" Margin="524,146,32,63" ColumnWidth="*" AutoGenerateColumns="True" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" IsReadOnly="True"/>
+            <Label Content="Borrow Equipment" HorizontalAlignment="Center" VerticalAlignment="Top" Height="64" Width="328" FontSize="36" Foreground="White" FontWeight="Bold" Margin="0,25,0,0"/>
+            <Image HorizontalAlignment="Left" Height="24" Margin="526,104,0,0" VerticalAlignment="Top" Width="43" Source="/magnifying-glass.png"/>
+            <Button x:Name="addToCartButton" Content="Add Item" HorizontalAlignment="Left" Margin="40,495,0,0" VerticalAlignment="Top" Height="61" Width="148" Background="White" FontSize="18" Click="addToCartButton_Click"/>
+            <DataGrid x:Name="tblBorrow" Margin="40,146,480,230" ColumnWidth="*" CanUserResizeColumns="False" CanUserReorderColumns="False" CanUserResizeRows="False" CanUserAddRows="False"/>
+            <Button x:Name="deleteButton" Content="Delete Item" HorizontalAlignment="Left" Margin="193,495,0,0" VerticalAlignment="Top" Height="61" Width="150" Background="White" FontSize="18" Click="deleteButton_Click"/>
+            <Button x:Name="browseExperimentButton" Content="Browse Experiments" HorizontalAlignment="Left" Margin="350,495,0,0" VerticalAlignment="Top" Height="61" Width="150" Background="White" FontSize="16" Click="browseExperimentButton_Click"/>
+            <Button x:Name="checkoutButton" Content="Checkout" HorizontalAlignment="Left" Margin="40,599,0,0" VerticalAlignment="Top" Height="58" Width="460" Background="White" FontSize="18" Click="checkoutButton_Click"/>
+            <Label Content="Equipment Cart" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="380" FontSize="36" Foreground="White" FontWeight="Bold" Margin="36,84,0,0"/>
+            <StackPanel x:Name="experimentPanel" Margin="526,146,30,29" Background="White" Visibility="Collapsed">
+                <Button x:Name="returnButton" Content="Return" Width="64" Height="30" Margin="-320,15,0,0" Click="returnButton_Click"/>
+                <ComboBox x:Name="experimentComboBox" Width="200" Margin="0,-30,0,0" SelectionChanged="experimentComboBox_SelectionChanged" DisplayMemberPath="Experiment_Name"/>
+                <Button x:Name="experimentAddToCartButton" Content="Add To Cart" Width="80" Height="30" Margin="320,-30,0,0" Click="experimentAddToCartButton_Click"/>
+                <DataGrid x:Name="tblExperiment" Margin="26,20,30,29" ColumnWidth="*" Grid.Row="1" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" IsReadOnly="True" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Item Name" Binding="{Binding Item_Name}"/>
+                        <DataGridTextColumn Header="Quantity Required" Binding="{Binding Quantity_Required}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+            <Label Content="Borrower Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="64" Width="380" FontSize="20" Foreground="White" FontWeight="Bold" Margin="35,556,0,0"/>
+        </Grid>
+        <Grid Grid.Column="1">
+            <TextBox x:Name="borrowerNameTextBox" HorizontalAlignment="Left" Margin="204,563,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="296" Height="26" FontSize="16"/>
+        </Grid>
+    </Grid>
+</Page>

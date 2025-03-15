@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AddCategoryWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddItemExperimentPopUp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddItemPopUp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddTemplatePopUp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Borrow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DeleteItemPopUp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DeleteTemplatePopUp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EquipmentTemplate.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Home.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="HomeEditDetails.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="InventoryReport.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="MainWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ProductCategorization.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ProductManagements.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ReportWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Return.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="StockNotification.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UpdateItemPopUp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UpdateTemplatePopUp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ActivityLog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AddCategoryWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddItemExperimentPopUp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddItemPopUp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddTemplatePopUp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Borrow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DeleteItemPopUp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DeleteTemplatePopUp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EquipmentTemplate.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Home.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="HomeEditDetails.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InventoryReport.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ProductCategorization.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ProductManagements.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ReportWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Return.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="StockNotification.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UpdateItemPopUp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UpdateTemplatePopUp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ActivityLog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

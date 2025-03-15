@@ -1,0 +1,28 @@
+﻿<Page x:Class="InventorySystem.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:InventorySystem"
+      mc:Ignorable="d" 
+        Title="Home" Height="720" Width="980" >
+    <Grid Background="#FFA09D9D">
+
+        <Grid Background="#FFA09D9D" >
+            <Image Height="291" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Top" Width="980" Opacity="0.5" Source="/LabEquipment.jpg"/>
+            <Label Content="🏠Home" HorizontalAlignment="Left" Margin="27,10,0,0" VerticalAlignment="Top" Height="64" Width="192" FontSize="36" Foreground="Black" FontWeight="Bold"/>
+            <Border Background="#99000000" CornerRadius="10" Padding="10"
+        HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,100,0,0">
+                <Label Content="Laboratory Inventory System" 
+           FontSize="58" FontWeight="Bold" 
+           Foreground="White" Width="820" Height="100" HorizontalContentAlignment="Center"/>
+            </Border>
+            <Label Content="Welcome, Admin!" HorizontalAlignment="Center" VerticalAlignment="Top" Height="82" Width="434" FontWeight="Bold" FontSize="50" Foreground="Black" Margin="0,332,0,0" />
+            <Button Content="Edit Account Details" HorizontalAlignment="Center" VerticalAlignment="Top" Height="100" Width="650" FontSize="30" FontWeight="Bold" Click="Button_Click" Margin="0,446,0,0">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+            </Button>
+        </Grid>
+    </Grid>
+</Page>
